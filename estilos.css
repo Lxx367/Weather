@@ -1,0 +1,122 @@
+/* estilos.css */
+body {
+    background-image:url(img/fondo.jpg);
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+.container {
+    margin-top: 20px;
+    margin-left: 30px;
+    margin-right: 30px;
+    text-align: center;
+}
+.navbar {
+    margin-bottom: 20px;
+}
+#form-tiempo{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.form-label{
+    padding-right: 10px;
+}
+#weatherDisplay, #searchForm {
+    display: flex;
+    background-color: rgba(32, 33, 36, 0.734);
+    padding: 20px;
+    padding-left: 40px;
+    padding-right: 40px;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: white;
+    font-family: monospace;
+}
+
+/* Estilos para la tabla de resultados */
+table {
+    width: 80%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+}
+
+th, td {
+    border: 1px solid rgb(10 14 108);
+    background-color: rgb(119 150 160);
+    color: white;
+    transition: background-color 0.3s;
+}
+
+/* Cambiar el fondo de celda al pasar el mouse sobre la tabla */
+th:hover, td:hover {
+    background-color: #000000;
+    color: rgb(10, 17, 228);
+}
+th, td {
+    padding: 8px;
+    text-align: left;
+}
+
+/* Estilos para los enlaces de navegación */
+.navbar-nav{
+    list-style: none;
+}
+.nav-link {
+    color: rgb(7 10 100);
+    text-decoration: none;
+    font-size: large;
+    background-color: white;
+    padding: 10px;
+    padding-top: 3px;
+    border-radius: 10px;
+}
+.nav-item{
+    margin: 15px;
+}
+.nav-link:hover {
+    color: #fff;
+    text-decoration: none;
+    font-size: large;
+    background-color: rgb(44, 84, 105);
+    padding: 6px;
+    padding-top: 3px;
+    border-radius: 10px;
+}
+/*Estilos para la barra de navegación*/
+#cityInput{
+    text-align: center;
+    border-color: rgb(148, 143, 143);
+    border-radius: 5px;
+}
+/*Estilos del botón de búsqueda*/
+#searchButton{
+    background-color: rgb(63 125 156);
+    width: auto;
+    color: white;
+    font-size: large;
+    border-radius: 30px;
+    border: 0;
+    padding: 10px;
+    margin: 10px;
+}
+#searchButton:hover{
+    background-color: rgb(44, 84, 105);
+    width: auto;
+    color: white;
+    font-size: large;
+    border-radius: 30px;
+    border: 0;
+    padding: 10px;
+    margin: 10px;
+}
+
+
+
