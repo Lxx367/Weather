@@ -1,0 +1,89 @@
+body {
+  background-image: url("../img/fondo.jpg");
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed; }
+
+.container {
+  margin-top: 20px;
+  margin-left: 30px;
+  margin-right: 30px;
+  text-align: center; }
+
+.navbar {
+  margin-bottom: 20px; }
+
+#form-tiempo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; }
+
+#weatherDisplay, #searchForm {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(32, 33, 36, 0.734);
+  padding: 20px;
+  padding-left: 40px;
+  padding-right: 40px;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  color: #fff;
+  font-family: monospace; }
+
+table {
+  width: 80%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); }
+  table th, table td {
+    border: 1px solid #0a0e6c;
+    background-color: #7796a0;
+    color: #fff;
+    transition: background-color 0.3s;
+    padding: 8px;
+    text-align: left; }
+    table th:hover, table td:hover {
+      background-color: #000000;
+      color: #0a11e4; }
+
+.navbar-nav {
+  list-style: none; }
+
+.nav-item {
+  margin: 15px; }
+
+.nav-link {
+  color: #070a64;
+  text-decoration: none;
+  font-size: large;
+  background-color: #fff;
+  padding: 10px 3px;
+  border-radius: 10px; }
+  .nav-link:hover {
+    background-color: #2c5469;
+    color: #fff; }
+
+#cityInput {
+  text-align: center;
+  border-color: #948f8f;
+  border-radius: 5px; }
+
+#searchButton {
+  background-color: #3f7d9c;
+  color: #fff;
+  font-size: large;
+  border-radius: 30px;
+  border: none;
+  padding: 10px;
+  margin: 10px; }
+  #searchButton:hover {
+    background-color: #2c5469;
+    color: #fff; }
+
+/*# sourceMappingURL=estilos.css.map */

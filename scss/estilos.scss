@@ -1,0 +1,136 @@
+$color-primary: rgba(32, 33, 36, 0.734);
+$color-secondary: rgb(44, 84, 105);
+$color-border: rgb(10, 14, 108);
+$color-accent: rgb(7, 10, 100);
+$color-hover: rgb(10, 17, 228);
+$color-text: #fff;
+$font-family-primary: Arial, sans-serif;
+$font-family-secondary: monospace;
+$font-size-base: 16px;
+$padding-base: 20px;
+$border-radius-base: 5px;
+$shadow-base: 0 4px 8px rgba(0, 0, 0, 0.2);
+
+// Mixins
+@mixin flex-center($direction: row) {
+  display: flex;
+  flex-direction: $direction;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin box-shadow($shadow: $shadow-base) {
+  box-shadow: $shadow;
+}
+
+@mixin padding($padding: $padding-base) {
+  padding: $padding;
+}
+
+@mixin transition($property: background-color, $duration: 0.3s) {
+  transition: $property $duration;
+}
+
+@mixin hover-effect($bg-color: $color-hover, $text-color: $color-text) {
+  &:hover {
+    background-color: $bg-color;
+    color: $text-color;
+  }
+}
+
+// Base Styles
+body {
+  background-image: url('../img/fondo.jpg');
+  font-family: $font-family-primary;
+  font-size: $font-size-base;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.container {
+  margin-top: 20px;
+  margin-left: 30px;
+  margin-right: 30px;
+  text-align: center;
+}
+
+.navbar {
+  margin-bottom: 20px;
+}
+
+// Form and Display Sections
+#form-tiempo {
+  @include flex-center(column);
+}
+
+#weatherDisplay, #searchForm {
+  @include flex-center(column);
+  background-color: $color-primary;
+  @include padding;
+  padding-left: 40px;
+  padding-right: 40px;
+  border-radius: $border-radius-base;
+  @include box-shadow;
+  color: $color-text;
+  font-family: $font-family-secondary;
+}
+
+// Table Styles
+table {
+  width: 80%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  background-color: #fff;
+  @include box-shadow;
+
+  th, td {
+    border: 1px solid $color-border;
+    background-color: rgb(119, 150, 160);
+    color: $color-text;
+    @include transition;
+    padding: 8px;
+    text-align: left;
+
+    @include hover-effect(#000000, $color-hover);
+  }
+}
+
+// Navbar Styles
+.navbar-nav {
+  list-style: none;
+}
+
+.nav-item {
+  margin: 15px;
+}
+
+.nav-link {
+  color: $color-accent;
+  text-decoration: none;
+  font-size: large;
+  background-color: #fff;
+  padding: 10px 3px;
+  border-radius: 10px;
+
+  @include hover-effect($color-secondary, $color-text);
+}
+
+// Input and Button Styles
+#cityInput {
+  text-align: center;
+  border-color: rgb(148, 143, 143);
+  border-radius: $border-radius-base;
+}
+
+#searchButton {
+  background-color: rgb(63, 125, 156);
+  color: $color-text;
+  font-size: large;
+  border-radius: 30px;
+  border: none;
+  padding: 10px;
+  margin: 10px;
+  
+  @include hover-effect($color-secondary, $color-text);
+}
